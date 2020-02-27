@@ -3,7 +3,7 @@
     <v-card class="pa-3">
       <v-row>
         <v-col>
-          <v-btn color="success" dark>Add Packages</v-btn>
+          <v-btn color="success" dark @click="addPackage">Add Packages</v-btn>
         </v-col>
         <v-col cols="3">
           <v-select
@@ -31,7 +31,12 @@ export default {
       items: ["INR", "USD", "NG"],
       selectedCurrency: ""
     };
-  }
+  },
+  methods: {
+    addPackage(){
+      this.$router.push('/addpackage')
+    }
+  },
 };
 </script>
 <style scoped>
