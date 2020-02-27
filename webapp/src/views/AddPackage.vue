@@ -47,6 +47,8 @@
 </template>
 
 <script>
+import packageService from '../services/packageService'
+
 export default {
   data() {
     return {
@@ -72,9 +74,18 @@ export default {
     };
   },
   methods: {
-    savePackage() {
+    async savePackage() {
         if(this.$refs.package_details.validate()){
             //Save the package to database
+            await packageService.addPackage({
+              name: this.name,
+              price: this.price,
+              supplier_currency: this.selectedCurrency
+            }).then(response => {
+              console.log(response.data.message)
+            }).catch(error => {
+              console.log(error.message)
+            })
         }
     },
     resetForm() {
