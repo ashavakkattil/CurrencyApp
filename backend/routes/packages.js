@@ -34,7 +34,6 @@ router.get('/', (req, res) => {
 
                         } else if (p.supplier_currency == "JPY") {
                             packagePrice = p.price / data.JPY;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
@@ -42,74 +41,62 @@ router.get('/', (req, res) => {
 
                         } else if (p.supplier_currency == "CAD") {
                             packagePrice = p.price / data.CAD;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "OMR") {
                             packagePrice = p.price / data.OMR;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "NGN") {
                             packagePrice = p.price / data.NGN;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "EUR") {
                             packagePrice = p.price / data.EUR;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "KWD") {
                             packagePrice = p.price / data.KWD;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "GBP") {
                             packagePrice = p.price / data.GBP;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "CHF") {
                             packagePrice = p.price / data.CHF;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "BHD") {
                             packagePrice = p.price / data.BHD;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "AUD") {
                             packagePrice = p.price / data.AUD;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
 
 
                         } else if (p.supplier_currency == "USD") {
                             packagePrice = p.price / data.USD;
-                            packagePrice = p.price / data.INR;
                             priceinINR = packagePrice * data.INR;
                             priceinNGN = packagePrice * data.NGN;
-
-
                         }
                         p.priceINR = Math.ceil(priceinINR);
                         p.priceUSD = Math.ceil(packagePrice);
