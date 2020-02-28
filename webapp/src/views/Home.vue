@@ -17,7 +17,7 @@
         </v-col>
       </v-row>
     </v-card>
-     <packageList :packages="packages"/>
+     <packageList :packages="packages" :currency = "selectedCurrency" />
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
   components: { packageList },
   data() {
     return {
-      items: ["INR", "USD", "NG"],
+      items: ["INR", "USD", "NGN"],
       selectedCurrency: "",
       packages: null,
       editedItem: null,
