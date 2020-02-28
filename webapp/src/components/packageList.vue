@@ -15,10 +15,11 @@ export default {
     return {
       editedIndex: 0,
       editedItem: null,
-      
+      packagePrice: null,
+      rate: "",
       headers: [
         { text: "Package Name", value: "name" },
-        { text: "Package price", value: "price" },
+        { text: "Package price", value: "priceUSD" },
         { text: "Actions", value: "action" }
       ]
     };
@@ -28,6 +29,7 @@ export default {
       this.editedItem = item;
       this.editedIndex = 1;
     }
-  }
+  },
+  mounted() {}
 };
 </script>

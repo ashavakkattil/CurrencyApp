@@ -33,7 +33,8 @@ export default {
       items: ["INR", "USD", "NG"],
       selectedCurrency: "",
       packages: null,
-      editedItem: null
+      editedItem: null,
+      
     };
   },
   methods: {
@@ -56,10 +57,12 @@ export default {
     })
     
       
-    }
+    },
+    
   },
   mounted() {
     this.getPackages();
+  
   },
 };
 </script>

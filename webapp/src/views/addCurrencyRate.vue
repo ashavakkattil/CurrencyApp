@@ -78,7 +78,8 @@ export default {
     return {
       selectedDate: null,
       menu: false,
-      formData: [{ name: "" }]
+      formData: [{ name: "" }],
+      rate: ""
     };
   },
   mounted() {

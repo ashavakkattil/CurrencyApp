@@ -19,6 +19,22 @@ router.post('/', (req,res) => {
     })
 })
 
+//Get the latest currency rate
 
+router.get('/', (req,res) => {
+    CurrencyRate.findOne().sort({date: -1}).limit(1).exec((error, data) => {
+        if(error){
+            res.status(500).json({
+                message: error.message
+            })
+        }
+        else{
+            res.status(200).json({
+                data: data,
+                message: 'Fetched successfully'
+            })
+        }
+    })
+})
 
 module.exports = router

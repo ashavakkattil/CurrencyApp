@@ -6,4 +6,12 @@ var packageSchema = mongoose.Schema({
     supplier_currency: String
 });
 
-module.exports = mongoose.model('package', packageSchema)
+packageSchema.methods.calculatePrice = function (currencyRate,p) {
+    
+    ppackage = JSON.parse(JSON.stringify(p));
+    ppackage.priceUSD = packagePrice;
+    ppackage.priceINR = priceinINR;
+    ppackage.priceNGN = priceinNGN;
+    return ppackage;
+},
+    module.exports = mongoose.model('package', packageSchema)
